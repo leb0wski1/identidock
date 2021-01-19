@@ -13,4 +13,3 @@ dnmonster:
 
 redis:
   image: redis
-  
