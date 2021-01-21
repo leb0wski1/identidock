@@ -20,12 +20,12 @@ if [ $ERR -eq 0 ]; then
   if [ $CODE -eq 200 ]; then
   echo "Test passed - Tagging"
     HASH=$(git rev-parse --short HEAD)
-    sudo docker tag jenkins_identidock leb0wski1/identidock:$HASH
-    sudo docker tag jenkins_identidock leb0wski1/identidock:newest
+    sudo docker tag jenkins_identidock lebowski1/identidock:$HASH
+    sudo docker tag jenkins_identidock lebowski1/identidock:newest
     echo "Pushing"
-    sudo docker login -u leb0wski1 -p ********
-    sudo docker push leb0wski1/identidock:$HASH
-    sudo docker push leb0wski1/identidock:newest
+    sudo docker login -u lebowski1 -p ********
+    sudo docker push lebowski1/identidock:$HASH
+    sudo docker push lebowski1/identidock:newest
   else
     echo "Site returned " $CODE
     ERR=1
